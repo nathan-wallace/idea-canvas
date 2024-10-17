@@ -1,7 +1,7 @@
 # Idea Canvas
 
 ## Overview
-The **Idea Canvas** is a web tool for brainstorming and organizing ideas, allowing users to create, save, delete, and print canvases. It is built using HTML, CSS, and JavaScript, enabling users to define their problem, solution, value proposition, and more.
+The **Idea Canvas**, https://nathan-wallace.github.io/idea-canvas/,  is a web tool for brainstorming and organizing ideas, allowing users to create, save, delete, and print canvases. It is built using HTML, CSS, and JavaScript, enabling users to define their problem, solution, value proposition, and more.
 
 ## Features
 - **Create, Save, Delete Canvases**: Allows users to create, save, and delete canvases.
