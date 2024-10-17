@@ -1,0 +1,371 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    max-width: 100%;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+/* Header and Modal Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #005fcc;
+    color: #ffffff;
+}
+
+.instructions-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffeb3b;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.instructions-button:hover {
+    background-color: #fdd835;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    float: right;
+}
+
+/* Canvas Title Container */
+.canvas-title-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.canvas-title-select {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.canvas-title-input {
+    max-width: 1000px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.canvas-title-input-field {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+/* Save, Delete, and Print Buttons */
+.save-button, .delete-button, .print-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #005fcc;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover, .delete-button:hover, .print-button:hover {
+    background-color: #004bb5;
+}
+
+/* Canvas Container */
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.canvas {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #333;
+    background-color: #f7f7f7;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Row and Column Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 20%;
+    box-sizing: border-box;
+}
+
+/* Section Styles */
+.section {
+    padding: 15px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.problem-statement {
+    background-color: #f9d5e5;
+}
+
+.proposed-solution {
+    background-color: #f9e0a1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.value-proposition {
+    background-color: #c8e6c9;
+}
+
+.implementation-plan {
+    background-color: #b3e5fc;
+}
+
+.potential-challenges {
+    background-color: #d1c4e9;
+}
+
+.target-users {
+    background-color: #ffccbc;
+}
+
+/* Text Area and Input Styles */
+textarea, input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    resize: none;
+    flex-grow: 1;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+textarea:focus, input[type="text"]:focus {
+    outline: 2px solid #005fcc;
+}
+
+/* No-Print Class */
+.no-print {
+    display: block;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+    .canvas {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+     /* By default, hide the print-value span */
+     .canvas-title-input .print-value {
+        display: none;
+    }
+    
+    @media print {
+        /* Hide the input field when printing */
+        .canvas-title-input input[type="text"] {
+            display: none;
+        }
+
+        /* Show the span that contains the input value when printing */
+        .canvas-title-input .print-value {
+            display: inline;
+            font-size: inherit;
+            font-family: inherit;
+            color: black;
+        }
+
+    .section {
+        border: none;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+
+    .no-print, .canvas-title-container {
+        display: none;
+    }
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        --background-color: #121212;
+        --text-color: #ffffff;
+    }
+
+    .canvas {
+        background-color: #1e1e1e;
+        border-color: #444;
+    }
+
+    .section {
+        background-color: #2c2c2c;
+        border-color: #444;
+    }
+
+    input[type="text"], .print-button, .save-button, .delete-button {
+        background-color: #2c2c2c;
+        color: #ffffff;
+        border-color: #444;
+    }
+
+    textarea:focus, input[type="text"]:focus {
+        outline: 2px solid #66b2ff;
+    }
+
+    .print-button:focus, .save-button:focus, .delete-button:focus {
+        outline: 2px solid #66b2ff;
+    }
+}
+
+/* Light Mode Styles */
+@media (prefers-color-scheme: light) {
+    body {
+        --background-color: #ffffff;
+        --text-color: #000000;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .canvas-container {
+        padding: 10px;
+    }
+
+    .canvas-title-container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bottom-controls {
+        margin: 10px auto;
+    }
+
+    .print-button, .save-button, .delete-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Additional Styles for WCAG 2.2 Compliance */
+button, input, textarea {
+    font-family: inherit;
+}
+
+button {
+    background-color: #005fcc;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004bb5;
+}
+
+button:focus {
+    outline: 2px solid #ffcc00;
+}
+
+a {
+    color: #005fcc;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+/* Ensure sufficient color contrast */
+.section {
+    color: #000000;
+}
+
+button, .print-button, .save-button, .delete-button {
+    color: #ffffff;
+}
+
+/* Provide focus indicators */
+input[type="text"], textarea {
+    outline: 2px solid transparent;
+    transition: outline 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: 2px solid #005fcc;
+}

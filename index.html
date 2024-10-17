@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebFirst Idea Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header class="no-print">
+        <h1>WebFirst Idea Canvas</h1>
+        <button id="instructions-button" class="instructions-button" aria-haspopup="dialog" aria-controls="instructions-modal">View Instructions</button>
+    </header>
+    <div id="instructions-modal" class="modal" role="dialog" aria-labelledby="instructions-title" aria-hidden="true">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal" aria-label="Close instructions">&times;</button>
+            <h2 id="instructions-title">How to Use the WebFirst Idea Canvas</h2>
+            <p>Welcome to the Fibonacci Idea Canvas. Use this tool to organize your ideas effectively. Please follow the instructions below to fill out each section:</p>
+            <ul>
+                <li><strong>Problem Statement:</strong> Clearly describe the problem you are addressing.</li>
+                <li><strong>Proposed Solution:</strong> Provide a detailed description of your solution to the problem.</li>
+                <li><strong>Value Proposition:</strong> Explain the benefits your solution offers to users or stakeholders.</li>
+                <li><strong>Implementation Plan:</strong> Outline the steps required to implement your solution.</li>
+                <li><strong>Potential Challenges:</strong> Identify possible obstacles and how you plan to overcome them.</li>
+                <li><strong>Target Users:</strong> Specify the target audience or users who will benefit from your solution.</li>
+            </ul>
+            <p>Fill in each section, save your canvas, and print it if needed.</p>
+        </div>
+    </div>
+    <div class="canvas-title-container">
+        <label for="canvas-title">Select or Create a Canvas:</label>
+        <select id="canvas-title" aria-label="Idea Canvas (e.g., Team Name)" class="canvas-title-select">
+            <option value="">Select or Enter a Idea</option>
+        </select>
+        <button class="save-button" onclick="saveCanvas()">Create</button>
+        <button class="delete-button" onclick="deleteCanvas()">Delete</button>
+        <button class="delete-button" onclick="printCanvas()">Print</button>
+    </div>
+    <div class="canvas-title-input">
+        <label for="canvas-title-input-field">Title:</label>
+        <input type="text" id="canvas-title-input-field" aria-label="Enter new canvas" placeholder="Canvas Title (e.g. Team Name)" />
+        <span class="print-value"></span>
+    </div>
+    <div class="canvas-container">
+        <div class="canvas">
+            <div class="section problem-statement">
+                <label for="problem-statement">Problem Statement:</label>
+                <textarea id="problem-statement" aria-labelledby="Problem Statement"></textarea>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="section proposed-solution">
+                        <label for="proposed-solution">Proposed Solution:</label>
+                        <textarea id="proposed-solution" aria-labelledby="Proposed Solution"></textarea>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="section value-proposition">
+                        <label for="value-proposition">Value Proposition:</label>
+                        <textarea id="value-proposition" aria-labelledby="Value Proposition"></textarea>
+                    </div>
+                    <div class="section implementation-plan">
+                        <label for="implementation-plan">Implementation Plan:</label>
+                        <textarea id="implementation-plan" aria-labelledby="Implementation Plan"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="section potential-challenges">
+                        <label for="potential-challenges">Potential Challenges:</label>
+                        <textarea id="potential-challenges" aria-labelledby="Potential Challenges"></textarea>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="section target-users">
+                        <label for="target-users">Target Users:</label>
+                        <textarea id="target-users" aria-labelledby="Target Users"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
