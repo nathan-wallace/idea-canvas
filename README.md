@@ -39,12 +39,6 @@ The canvas includes the following sections:
 - **styles.css**: The CSS file that styles the application, including responsiveness and print styles.
 - **scripts.js**: The JavaScript file that handles user interactions, including saving, deleting, and printing canvases.
 
-## Technical Details
-- **Local Storage**: Canvases are saved in the browser's local storage. This allows data to persist between sessions, but only on the same device and browser.
-- **Print Support**: A custom print style sheet is used to ensure a clean and professional look when printing.
-- **Accessibility**: Efforts have been made to follow WCAG 2.2 guidelines, including appropriate labels, modal behavior, and focus management.
-- **Dark/Light Mode**: CSS media queries are used to adapt the appearance of the canvas based on system preferences.
-
 ## Requirements
 - A modern web browser (Chrome, Firefox, Safari, Edge) that supports HTML5, CSS3, and JavaScript.
 - No additional server or backend is required as everything is managed locally within the browser.
