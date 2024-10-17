@@ -5,9 +5,7 @@ The **Idea Canvas**, https://nathan-wallace.github.io/idea-canvas/,  is a web to
 
 ## Features
 - **Create, Save, Delete Canvases**: Allows users to create, save, and delete canvases.
-- **Responsive Layout**: The layout is designed to be fully responsive, providing a consistent experience across devices.
-- **Print Capability**: Users can print their canvases, and a dedicated print layout ensures a clean, formatted version of the canvas without extra UI elements.
-- **Dark/Light Mode**: The canvas adapts to the user's system preference for dark or light mode, making it comfortable for use in different environments.
+- **Print Capability**: Users can print their canvases.
 
 ## Sections of the Canvas
 The canvas includes the following sections:
