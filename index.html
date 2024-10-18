@@ -9,8 +9,19 @@
 </head>
 <body>
     <header class="no-print">
+        <div class="title-container">
         <h1>WebFirst Idea Canvas</h1>
         <button id="instructions-button" class="instructions-button" aria-haspopup="dialog" aria-controls="instructions-modal">View Instructions</button>
+        </div>
+        <div class="canvas-title-container">
+            <label for="canvas-title">Select Canvas:</label>
+            <select id="canvas-title" aria-label="Idea Canvas (e.g., Team Name)" class="canvas-title-select">
+                <option value="">Select Idea</option>
+            </select>
+            <button class="save-button" onclick="saveCanvas()">Create</button>
+            <button class="delete-button" onclick="deleteCanvas()">Delete</button>
+            <button class="delete-button" onclick="printCanvas()">Print</button>
+        </div>
     </header>
     <div id="instructions-modal" class="modal" role="dialog" aria-labelledby="instructions-title" aria-hidden="true">
         <div class="modal-content">
@@ -27,15 +38,6 @@
             </ul>
             <p>Fill in each section, save your canvas, and print it if needed.</p>
         </div>
-    </div>
-    <div class="canvas-title-container">
-        <label for="canvas-title">Select or Create a Canvas:</label>
-        <select id="canvas-title" aria-label="Idea Canvas (e.g., Team Name)" class="canvas-title-select">
-            <option value="">Select or Enter a Idea</option>
-        </select>
-        <button class="save-button" onclick="saveCanvas()">Create</button>
-        <button class="delete-button" onclick="deleteCanvas()">Delete</button>
-        <button class="delete-button" onclick="printCanvas()">Print</button>
     </div>
     <div class="canvas-title-input">
         <label for="canvas-title-input-field">Title:</label>
