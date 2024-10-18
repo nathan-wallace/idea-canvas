@@ -212,6 +212,11 @@ textarea:focus, input[type="text"]:focus {
     display: block;
 }
 
+ /* By default, hide the print-value span */
+.print-value {
+    display: none;
+}
+
 /* Print Styles */
 @media print {
     body {
@@ -224,13 +229,7 @@ textarea:focus, input[type="text"]:focus {
         margin: 0;
         padding: 0;
     }
-
-     /* By default, hide the print-value span */
-     .canvas-title-input .print-value {
-        display: none;
-    }
     
-    @media print {
         /* Hide the input field when printing */
         .canvas-title-input input[type="text"] {
             display: none;
